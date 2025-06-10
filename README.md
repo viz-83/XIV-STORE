@@ -1,6 +1,6 @@
 # 🛍️ XIV STORE
 
-A modern full-stack e-commerce application built with the MERN stack (MongoDB, Express, React, Node.js). This project demonstrates a scalable and responsive shopping experience with user authentication, product management, and cart functionality.
+A modern full-stack e-commerce application built with the PERN stack (Postgre SQL, Express, React, Node.js). This project demonstrates a scalable and responsive shopping experience with user authentication, product management, and cart functionality.
 
 🔗 **Live Demo:** [xiv-store.onrender.com](https://xiv-store.onrender.com)  
 💻 **Backend + Frontend Code:** [GitHub Repository](https://github.com/viz-83/XIV-STORE)
@@ -28,9 +28,6 @@ A modern full-stack e-commerce application built with the MERN stack (MongoDB, E
 
 - 📦 Browse products with detailed view
 - 🛒 Add, update, and remove items from cart
-- 🔐 JWT-based authentication (Register / Login / Logout)
-- 👤 User and admin roles
-- 🛠️ Admin panel for product CRUD operations
 - 📱 Fully responsive design
 - ✅ Form validation & error handling
 - ⚡ RESTful API integration
@@ -44,17 +41,16 @@ A modern full-stack e-commerce application built with the MERN stack (MongoDB, E
 - React Router
 - Tailwind CSS
 - Axios
-- React Context API + useReducer (for state management)
+- Zustand (for state management)
 
 **Backend**
 - Node.js
 - Express.js
-- MongoDB with Mongoose
-- JSON Web Tokens (JWT) for auth
+- Postgre SQL
 - CORS, dotenv, express-validator
 
 **Deployment**
-- Render (both frontend and backend hosted separately)
+- Render (both frontend and backend hosted together).
 
 ---
 
@@ -66,14 +62,13 @@ XIV-STORE/
 🔺   ├── src/
 🔺   │   ├── components/
 🔺   │   ├── pages/
-🔺   │   ├── context/
 🔺   │   └── App.js
 🔺   ├── public/screenshots/
 🔺   └── tailwind.config.js
 🔺 server/                 # Node.js + Express backend
 🔺   ├── controllers/
 🔺   ├── models/
-🔺   ├── routes/
+🔺   ├── config/
 🔺   ├── middleware/
 🔺   └── server.js
 ```
@@ -85,7 +80,6 @@ XIV-STORE/
 ### Prerequisites
 
 - Node.js and npm
-- MongoDB instance (local or cloud)
 
 ### 1. Clone the Repository
 
@@ -115,8 +109,7 @@ npm install
 Create a `.env` file in the `server` folder with the following:
 
 ```env
-MONGO_URI=your_mongo_connection_string
-JWT_SECRET=your_jwt_secret_key
+DATABASE_URI=your_mongo_connection_string
 PORT=5000
 ```
 
